@@ -9,7 +9,7 @@ mrb_println(mrb_state *mrb, mrb_value self)
 {
 	mrb_value str;
 	mrb_get_args(mrb, "S", &str);
-	Println(Widen(mrb_string_value_ptr(mrb, str)));
+	Println(FromUTF8(mrb_string_value_ptr(mrb, str)));
 	return mrb_nil_value();
 }
 
