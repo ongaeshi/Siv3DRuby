@@ -76,10 +76,100 @@
     <Filter Include="リソース ファイル\Example\Well">
       <UniqueIdentifier>{eb86b9be-05b8-45c6-89c8-f91a5437157c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\mruby">
+      <UniqueIdentifier>{ecdc071a-e3f8-4625-9c97-44c31bc66ebf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="mruby\src\array.c">
+      <Filter>ソース ファイル\mruby</Filter>
+    </ClCompile>
+    <ClCompile Include="mruby\src\backtrace.c">
+      <Filter>ソース ファイル\mruby</Filter>
+    </ClCompile>
+    <ClCompile Include="mruby\src\class.c">
+      <Filter>ソース ファイル\mruby</Filter>
+    </ClCompile>
+    <ClCompile Include="mruby\src\codedump.c">
+      <Filter>ソース ファイル\mruby</Filter>
+    </ClCompile>
+    <ClCompile Include="mruby\src\compar.c">
+      <Filter>ソース ファイル\mruby</Filter>
+    </ClCompile>
+    <ClCompile Include="mruby\src\crc.c">
+      <Filter>ソース ファイル\mruby</Filter>
+    </ClCompile>
+    <ClCompile Include="mruby\src\debug.c">
+      <Filter>ソース ファイル\mruby</Filter>
+    </ClCompile>
+    <ClCompile Include="mruby\src\dump.c">
+      <Filter>ソース ファイル\mruby</Filter>
+    </ClCompile>
+    <ClCompile Include="mruby\src\enum.c">
+      <Filter>ソース ファイル\mruby</Filter>
+    </ClCompile>
+    <ClCompile Include="mruby\src\error.c">
+      <Filter>ソース ファイル\mruby</Filter>
+    </ClCompile>
+    <ClCompile Include="mruby\src\etc.c">
+      <Filter>ソース ファイル\mruby</Filter>
+    </ClCompile>
+    <ClCompile Include="mruby\src\fmt_fp.c">
+      <Filter>ソース ファイル\mruby</Filter>
+    </ClCompile>
+    <ClCompile Include="mruby\src\gc.c">
+      <Filter>ソース ファイル\mruby</Filter>
+    </ClCompile>
+    <ClCompile Include="mruby\src\hash.c">
+      <Filter>ソース ファイル\mruby</Filter>
+    </ClCompile>
+    <ClCompile Include="mruby\src\init.c">
+      <Filter>ソース ファイル\mruby</Filter>
+    </ClCompile>
+    <ClCompile Include="mruby\src\kernel.c">
+      <Filter>ソース ファイル\mruby</Filter>
+    </ClCompile>
+    <ClCompile Include="mruby\src\load.c">
+      <Filter>ソース ファイル\mruby</Filter>
+    </ClCompile>
+    <ClCompile Include="mruby\src\numeric.c">
+      <Filter>ソース ファイル\mruby</Filter>
+    </ClCompile>
+    <ClCompile Include="mruby\src\object.c">
+      <Filter>ソース ファイル\mruby</Filter>
+    </ClCompile>
+    <ClCompile Include="mruby\src\pool.c">
+      <Filter>ソース ファイル\mruby</Filter>
+    </ClCompile>
+    <ClCompile Include="mruby\src\print.c">
+      <Filter>ソース ファイル\mruby</Filter>
+    </ClCompile>
+    <ClCompile Include="mruby\src\proc.c">
+      <Filter>ソース ファイル\mruby</Filter>
+    </ClCompile>
+    <ClCompile Include="mruby\src\range.c">
+      <Filter>ソース ファイル\mruby</Filter>
+    </ClCompile>
+    <ClCompile Include="mruby\src\state.c">
+      <Filter>ソース ファイル\mruby</Filter>
+    </ClCompile>
+    <ClCompile Include="mruby\src\string.c">
+      <Filter>ソース ファイル\mruby</Filter>
+    </ClCompile>
+    <ClCompile Include="mruby\src\symbol.c">
+      <Filter>ソース ファイル\mruby</Filter>
+    </ClCompile>
+    <ClCompile Include="mruby\src\variable.c">
+      <Filter>ソース ファイル\mruby</Filter>
+    </ClCompile>
+    <ClCompile Include="mruby\src\version.c">
+      <Filter>ソース ファイル\mruby</Filter>
+    </ClCompile>
+    <ClCompile Include="mruby\src\vm.c">
+      <Filter>ソース ファイル\mruby</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -275,7 +365,7 @@
     </None>
     <None Include="Engine\Shaders\D3D11\DeferredMesh_Shadow.vs">
       <Filter>リソース ファイル\Engine\Shaders\D3D11</Filter>
-    </None>    
+    </None>
     <None Include="Engine\Shaders\D3D11\DeferredMesh_Textured.ps">
       <Filter>リソース ファイル\Engine\Shaders\D3D11</Filter>
     </None>
@@ -379,7 +469,7 @@
     </Text>
     <Text Include="Example\Shaders\Wave2DPointSprites.hlsl">
       <Filter>リソース ファイル\Example\Shaders</Filter>
-    </Text>   
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <Media Include="Example\Sound.mp3">
@@ -393,5 +483,16 @@
     <Font Include="Example\YomogiFont.ttf">
       <Filter>リソース ファイル\Example</Filter>
     </Font>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="mruby\src\error.h">
+      <Filter>ソース ファイル\mruby</Filter>
+    </ClInclude>
+    <ClInclude Include="mruby\src\opcode.h">
+      <Filter>ソース ファイル\mruby</Filter>
+    </ClInclude>
+    <ClInclude Include="mruby\src\value_array.h">
+      <Filter>ソース ファイル\mruby</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
