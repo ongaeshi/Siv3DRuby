@@ -20,6 +20,12 @@ mrb_wait_key(mrb_state *mrb, mrb_value self)
 	return mrb_nil_value();
 }
 
+static mrb_value
+mrb_system_update(mrb_state *mrb, mrb_value self)
+{
+	return mrb_bool_value(System::Update());
+}
+
 void mrb_init(mrb_state *mrb)
 {
 	{
@@ -28,11 +34,11 @@ void mrb_init(mrb_state *mrb)
 		mrb_define_method(mrb, krn, "wait_key", mrb_wait_key, MRB_ARGS_NONE());
 	}
 
-	//{
-	//	struct RClass *cc = mrb_define_module(mrb, "System");
+	{
+		struct RClass *cc = mrb_define_module(mrb, "System");
 
-	//	mrb_define_class_method(mrb, cc, "update", mrb_system_update, MRB_ARGS_NONE());
-	//}
+		mrb_define_class_method(mrb, cc, "update", mrb_system_update, MRB_ARGS_NONE());
+	}
 
 	//{
 	//	struct RClass *cc = mrb_define_class(mrb, "Circle", mrb->object_class);

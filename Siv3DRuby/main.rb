@@ -8,5 +8,6 @@ println "Hello mruby #{r}"
 println "こんにちは, Siv3DRuby"
 wait_key
 
-# while System.update do
-# end
+while System.update do
+end
+
