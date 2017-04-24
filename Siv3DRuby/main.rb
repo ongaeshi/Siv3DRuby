@@ -6,8 +6,9 @@ r = a + b + array[0] + array[1] + array[2]
 
 println "Hello mruby #{r}"
 println "こんにちは, Siv3DRuby"
-wait_key
+# wait_key
 
 while System.update do
+  Circle.draw_test
 end
 
