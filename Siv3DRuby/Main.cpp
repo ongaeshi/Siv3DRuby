@@ -10,12 +10,12 @@ void Main()
 	mrb_state* mrb = mrb_open();
 	//mrb_init(mrb);
 
-	const Font font(30);
-
-	while (System::Update())
+	FILE* fp;
+	fopen_s(&fp, "main.rb", "r");
 	{
-		font(L"ようこそ、Siv3D の世界へ！").draw();
-
-		Circle(Mouse::Pos(), 50).draw({ 255, 0, 0, 127 });
+		mrb_value ret = mrb_load_file(mrb, fp);
 	}
+	fclose(fp);
+
+	mrb_close(mrb);
 }

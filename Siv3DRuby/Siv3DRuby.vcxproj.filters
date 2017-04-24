@@ -79,6 +79,9 @@
     <Filter Include="ソース ファイル\mruby">
       <UniqueIdentifier>{ecdc071a-e3f8-4625-9c97-44c31bc66ebf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\mruby-compiler">
+      <UniqueIdentifier>{62d01aeb-a334-42e3-a718-ac4086331a88}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -170,6 +173,12 @@
     </ClCompile>
     <ClCompile Include="mruby\src\vm.c">
       <Filter>ソース ファイル\mruby</Filter>
+    </ClCompile>
+    <ClCompile Include="mruby\mrbgems\mruby-compiler\core\codegen.c">
+      <Filter>ソース ファイル\mruby-compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="mruby\mrbgems\mruby-compiler\core\y.tab.c">
+      <Filter>ソース ファイル\mruby-compiler</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
