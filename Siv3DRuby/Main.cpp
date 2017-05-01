@@ -1,5 +1,4 @@
-﻿
-#include <Siv3D.hpp>
+﻿#include <Siv3D.hpp>
 #include "mruby.h"
 #include "mruby/compile.h"
 

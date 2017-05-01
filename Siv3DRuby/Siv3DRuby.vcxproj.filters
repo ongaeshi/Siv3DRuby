@@ -82,6 +82,9 @@
     <Filter Include="ソース ファイル\mruby-compiler">
       <UniqueIdentifier>{62d01aeb-a334-42e3-a718-ac4086331a88}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\mruby-error">
+      <UniqueIdentifier>{9234c30f-8b94-4ab1-8c87-69e71f3429e2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -182,6 +185,9 @@
     </ClCompile>
     <ClCompile Include="mrb_misc.cpp">
       <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="mruby\mrbgems\mruby-error\src\exception.c">
+      <Filter>ソース ファイル\mruby-error</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

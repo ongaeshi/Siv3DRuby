@@ -167,6 +167,7 @@
     <ClCompile Include="mrb_misc.cpp" />
     <ClCompile Include="mruby\mrbgems\mruby-compiler\core\codegen.c" />
     <ClCompile Include="mruby\mrbgems\mruby-compiler\core\y.tab.c" />
+    <ClCompile Include="mruby\mrbgems\mruby-error\src\exception.c" />
     <ClCompile Include="mruby\src\array.c" />
     <ClCompile Include="mruby\src\backtrace.c" />
     <ClCompile Include="mruby\src\class.c" />
