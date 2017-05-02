@@ -22,14 +22,6 @@ static mrb_value mrb_system_update(mrb_state *mrb, mrb_value self)
     return mrb_bool_value(System::Update());
 }
 
-static mrb_value mrb_circle_draw_test(mrb_state *mrb, mrb_value self)
-{
-    mrb_int x, y;
-    //mrb_get_args();
-    Circle(200, 200, 100).draw();
-    return mrb_nil_value();
-}
-
 extern void mrb_siv3druby_circle_init(mrb_state *mrb);
 
 void mrb_init(mrb_state *mrb)
