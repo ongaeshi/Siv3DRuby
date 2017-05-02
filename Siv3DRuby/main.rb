@@ -1,3 +1,4 @@
+# coding: utf-8
 a = 1
 b = 3
 array = [1, 2, 3]
@@ -9,6 +10,6 @@ println "こんにちは, Siv3DRuby"
 # wait_key
 
 while System.update do
-  Circle.draw_test
+  Circle.new.draw
 end
 

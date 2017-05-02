@@ -30,6 +30,8 @@ static mrb_value mrb_circle_draw_test(mrb_state *mrb, mrb_value self)
     return mrb_nil_value();
 }
 
+extern void mrb_siv3druby_circle_init(mrb_state *mrb);
+
 void mrb_init(mrb_state *mrb)
 {
     {
@@ -44,9 +46,5 @@ void mrb_init(mrb_state *mrb)
         mrb_define_class_method(mrb, cc, "update", mrb_system_update, MRB_ARGS_NONE());
     }
 
-    {
-        struct RClass *cc = mrb_define_class(mrb, "Circle", mrb->object_class);
-
-        mrb_define_class_method(mrb, cc, "draw_test", mrb_circle_draw_test, MRB_ARGS_REQ(2));
-    }
+    mrb_siv3druby_circle_init(mrb);
 }
