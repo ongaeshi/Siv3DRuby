@@ -43,6 +43,19 @@ void MrbPoint::Init(mrb_state* mrb)
 }
 
 //----------------------------------------------------------
+mrb_value MrbPoint::ToMrb(mrb_state *mrb, Point *ptr)
+{
+    return ToMrb(mrb, mrb_class_get(mrb, "Point"), ptr);
+}
+
+//----------------------------------------------------------
+mrb_value MrbPoint::ToMrb(mrb_state *mrb, struct RClass *cc, Point *ptr)
+{
+    struct RData *data = mrb_data_object_alloc(mrb, cc, ptr, &data_type);
+    return mrb_obj_value(data);
+}
+
+//----------------------------------------------------------
 Point* MrbPoint::ToCpp(mrb_state *mrb, mrb_value value)
 {
     return ToCpp(mrb, mrb_class_get(mrb, "Point"), value);
