@@ -180,13 +180,13 @@
     <ClCompile Include="mruby\mrbgems\mruby-compiler\core\y.tab.c">
       <Filter>ソース ファイル\mruby-compiler</Filter>
     </ClCompile>
-    <ClCompile Include="mrb_misc.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="mrb_circle.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="MrbPoint.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="MrbMisc.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>

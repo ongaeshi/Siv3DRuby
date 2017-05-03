@@ -14,6 +14,7 @@ y = 480
 
 while System.update do
   Circle.new(Point.new(x, y), 50).draw
+
   if x > 800
     x = -100
     y = 480

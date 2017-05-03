@@ -5,8 +5,8 @@
 #include "mruby/data.h"
 #include "mruby/value.h"
 
+//----------------------------------------------------------
 namespace siv3druby {
-
 namespace {
 Point& toCpp(mrb_value self)
 {
