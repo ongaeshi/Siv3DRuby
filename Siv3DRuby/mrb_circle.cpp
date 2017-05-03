@@ -1,4 +1,5 @@
 #include <Siv3D.hpp>
+#include "MrbPoint.hpp"
 #include "mruby.h"
 #include "mruby/class.h"
 #include "mruby/data.h"
@@ -20,9 +21,12 @@ struct mrb_data_type data_type = { "siv3d_circle", free };
 
 static mrb_value mrb_siv3druby_circle_initialize(mrb_state *mrb, mrb_value self)
 {
-    Point *p = new Point(200, 200);
-    Circle* obj = new Circle(*p, 100);
-    delete p;
+    mrb_value pos;
+    mrb_int radius;
+    mrb_get_args(mrb, "oi", &pos, &radius);
+
+    Circle* obj = new Circle(*siv3druby::MrbPoint::ToCpp(mrb, pos), radius);
+
     mrb_data_init(self, obj, &data_type);
     return self;
 }

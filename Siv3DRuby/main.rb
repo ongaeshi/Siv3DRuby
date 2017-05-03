@@ -9,8 +9,21 @@ println "Hello mruby #{r}"
 println "こんにちは, Siv3DRuby"
 # wait_key
 
+x = -100
+y = 480
+
 while System.update do
-  Circle.new(100, 100, 100).draw
-  # Circle.new(Point.new(100, 100), 100).draw
+  Circle.new(Point.new(x, y), 50).draw
+  if x > 800
+    x = -100
+    y = 480
+  end
+  x += 1
+
+  if x > 320 - 50
+    y += 1
+  else
+    y -= 1
+  end
 end
 
