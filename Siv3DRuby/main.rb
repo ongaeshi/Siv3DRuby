@@ -10,6 +10,7 @@ println "こんにちは, Siv3DRuby"
 # wait_key
 
 while System.update do
-  Circle.new.draw
+  Circle.new(100, 100, 100).draw
+  # Circle.new(Point.new(100, 100), 100).draw
 end
 

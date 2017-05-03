@@ -164,6 +164,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MrbPoint.cpp" />
     <ClCompile Include="mrb_circle.cpp" />
     <ClCompile Include="mrb_misc.cpp" />
     <ClCompile Include="mruby\mrbgems\mruby-compiler\core\codegen.c" />

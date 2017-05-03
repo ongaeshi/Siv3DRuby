@@ -1,4 +1,5 @@
 ﻿#include <Siv3D.hpp>
+#include "MrbPoint.hpp"
 #include "mruby.h"
 #include "mruby/irep.h"
 #include "mruby/string.h"
@@ -39,4 +40,5 @@ void mrb_init(mrb_state *mrb)
     }
 
     mrb_siv3druby_circle_init(mrb);
+    siv3druby::MrbPoint::Init(mrb);
 }

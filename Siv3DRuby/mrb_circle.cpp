@@ -16,11 +16,13 @@ static void free(mrb_state *mrb, void *p)
 	}
 }
 
-struct mrb_data_type data_type = { "siv3druby_circle", free };
+struct mrb_data_type data_type = { "siv3d_circle", free };
 
 static mrb_value mrb_siv3druby_circle_initialize(mrb_state *mrb, mrb_value self)
 {
-    Circle* obj = new Circle(200, 200, 100);
+    Point *p = new Point(200, 200);
+    Circle* obj = new Circle(*p, 100);
+    delete p;
     mrb_data_init(self, obj, &data_type);
     return self;
 }
