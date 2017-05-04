@@ -1,5 +1,6 @@
 ﻿#include <Siv3D.hpp>
 // #include "MrbCircle.hpp"
+#include "MrbFont.hpp"
 #include "MrbMisc.hpp"
 #include "MrbPoint.hpp"
 #include "mruby.h"
@@ -11,8 +12,9 @@ void Main()
 {
     mrb_state* mrb = mrb_open();
 
-    siv3druby::MrbMisc::Init(mrb);
     mrb_siv3druby_circle_init(mrb);
+    siv3druby::MrbFont::Init(mrb);
+    siv3druby::MrbMisc::Init(mrb);
     siv3druby::MrbPoint::Init(mrb);
 
     FILE* fp;
