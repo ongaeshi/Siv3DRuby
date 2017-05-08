@@ -1,5 +1,6 @@
 #include "MrbFont.hpp"
 
+#include "MrbDrawableString.hpp"
 #include "mruby/array.h"
 #include "mruby/class.h"
 #include "mruby/data.h"
@@ -32,6 +33,13 @@ mrb_value initialize(mrb_state *mrb, mrb_value self)
     mrb_data_init(self, obj, &data_type);
     return self;
 }
+
+mrb_value aref(mrb_state *mrb, mrb_value self)
+{
+    auto dstr1 = toCpp(self)(L"Test");
+    auto dstr = new DrawableString(dstr1);
+    return MrbDrawableString::ToMrb(mrb, dstr);
+}
 }
 
 //----------------------------------------------------------
@@ -40,6 +48,7 @@ void MrbFont::Init(mrb_state* mrb)
     struct RClass *cc = mrb_define_class(mrb, "Font", mrb->object_class);
 
     mrb_define_method(mrb, cc, "initialize", initialize, MRB_ARGS_REQ(1));
+    mrb_define_method(mrb, cc, "[]", aref, MRB_ARGS_REQ(1));
 }
 
 //----------------------------------------------------------
