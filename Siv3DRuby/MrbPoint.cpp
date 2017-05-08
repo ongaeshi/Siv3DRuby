@@ -32,6 +32,13 @@ mrb_value initialize(mrb_state *mrb, mrb_value self)
     mrb_data_init(self, obj, &data_type);
     return self;
 }
+
+mrb_value to_s(mrb_state *mrb, mrb_value self)
+{
+    std::stringstream stream;
+    stream << toCpp(self);
+    return mrb_str_new_cstr(mrb, stream.str().c_str());
+}
 }
 
 //----------------------------------------------------------
@@ -40,6 +47,7 @@ void MrbPoint::Init(mrb_state* mrb)
     struct RClass *cc = mrb_define_class(mrb, "Point", mrb->object_class);
 
     mrb_define_method(mrb, cc, "initialize", initialize, MRB_ARGS_REQ(2));
+    mrb_define_method(mrb, cc, "to_s", to_s, MRB_ARGS_NONE());
 }
 
 //----------------------------------------------------------

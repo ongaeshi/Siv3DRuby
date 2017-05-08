@@ -4,6 +4,7 @@
 #include "mruby/array.h"
 #include "mruby/class.h"
 #include "mruby/data.h"
+#include "mruby/string.h"
 #include "mruby/value.h"
 
 //----------------------------------------------------------
@@ -36,8 +37,11 @@ mrb_value initialize(mrb_state *mrb, mrb_value self)
 
 mrb_value aref(mrb_state *mrb, mrb_value self)
 {
-    auto dstr1 = toCpp(self)(L"Test");
-    auto dstr = new DrawableString(dstr1);
+    mrb_value str;
+    mrb_get_args(mrb, "S", &str);
+
+    auto cstr = mrb_string_value_ptr(mrb, str);
+    auto dstr = new DrawableString(toCpp(self)(FromUTF8(cstr)));
     return MrbDrawableString::ToMrb(mrb, dstr);
 }
 }
